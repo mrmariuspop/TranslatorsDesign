@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Recipes[
+<!ELEMENT Recipes (Description, Recipe*)>
+<!ELEMENT Description (#PCDATA)>
+<!ELEMENT Recipe (Title,Ingredients,Preparation,COmment?,Nutrients)>
+<!ELEMENT Title (#PCDATA)>
+<!ELEMENT Ingredients (Ingredient+)>
+<!ELEMENT Ingredient EMPTY>
+<!ELEMENT Preparation (Step+)>
+<!ELEMENT Step (#PCDATA)>
+<!ELEMENT Comment (#PCDATA)>
+<!ELEMENT Nutrients EMPTY>
+<!ATTLIST Ingredient name CDATA #REQUIRED
+					 qty  CDATA #REQUIRED
+					 unit CDATA #REQUIRED>
+<!ATTLIST Nutrients proteins  CDATA #REQUIRED
+				    carbohid  CDATA #REQUIRED
+					fat       CDATA #REQUIRED
+					vitamins  CDATA #REQUIRED
+					calories  CDATA #REQUIRED>
+	]
+>
+
+<Recipes>
+	<Description>Description about the book</Description>
+	<Recipe>
+		<Title>Pui cu orez</Title>
+		<Ingredients>
+			<Ingredient name="sofran" qty="21" unit="gram"></Ingredient>
+		</Ingredients>
+		<Preparation>
+			<Step>Pasul1</Step>
+		</Preparation>
+		<Comment>Comentariu</Comment>
+		<Nutrients proteins="123" carbohid="21" fat="12" vitamins="213" calories="213"></Nutrients>
+	</Recipe>
+	<Recipe>
+		<Title>Friptura de vita</Title>
+		<Ingredients>
+			<Ingredient name="sofran" qty="21" unit="gram"></Ingredient>
+		</Ingredients>
+		<Preparation>
+			<Step>Pasi dupa pasi</Step>
+		</Preparation>
+		<Comment>Comentariu</Comment>
+		<Nutrients proteins="123" carbohid="21" fat="12" vitamins="213" calories="213"></Nutrients>
+	</Recipe>
+</Recipes>

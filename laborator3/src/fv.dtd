@@ -1,0 +1,18 @@
+<!ELEMENT Recipes (Description, Recipe*)>
+<!ELEMENT Description (#PCDATA)>
+<!ELEMENT Recipe (Title,Ingredients,Preparation,Comment?,Nutrients)>
+<!ELEMENT Title (#PCDATA)>
+<!ELEMENT Ingredients (Ingredient+)>
+<!ELEMENT Ingredient EMPTY>
+<!ELEMENT Preparation (Step+)>
+<!ELEMENT Step (#PCDATA)>
+<!ELEMENT Comment (#PCDATA)>
+<!ELEMENT Nutrients EMPTY>
+<!ATTLIST Ingredient name CDATA #REQUIRED
+					 qty  CDATA #REQUIRED
+					 unit CDATA #REQUIRED>
+<!ATTLIST Nutrients proteins  CDATA #REQUIRED
+				    carbohid  CDATA #REQUIRED
+					fat       CDATA #REQUIRED
+					vitamins  CDATA #REQUIRED
+					calories  CDATA #REQUIRED>
