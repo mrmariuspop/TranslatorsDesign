@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:simpleType name="SaxonMeasureUnit">
+		<xs:restriction name="base" value="xs:string">
+			<xs:enumeration value="inch"></xs:enumeration>
+			<xs:enumeration value="foot"></xs:enumeration>
+			<xs:enumeration value="mile"></xs:enumeration>
+			<xs:enumeration value="ounce"></xs:enumeration>
+			<xs:enumeration value="acre"></xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="MUofInstrument">
+		<xs:list itemType="SaxonMeasureUnit">	
+		</xs:list>
+	</xs:simpleType>
+	
+	<xs:element name="AddNewCatalog">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element type="MUofInstrument" name="MU" minOccurs="0" maxOccurs="unbounded"></xs:element>
+			</xs:sequence>
+		</xs:complexType>
+</xs:schema>
