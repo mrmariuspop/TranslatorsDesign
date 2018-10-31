@@ -1,0 +1,49 @@
+XPath 1.0  Data Model is based on 7 types of nodes 
+ 
+ Data model: 
+ 
+ Root node from XPATH does NOT represent Root Element. (The root element is the son of ROOT Node)
+ Element
+ Attribute
+ Text
+ Comment
+ PI
+ Namespace
+ 
+ Datatypes accepted by XPath:
+ 
+ node-set (it is an unordered set of nodes without duplicates --> processor takes care of removing the duplicates)
+ boolean
+ number
+ string
+ ------------
+ In XPath we work with Expressions:
+ Path Location Expression
+ 
+ /step1/step2/..../stepn  (this is an example of an ABSOLUTE XPath expression and not RELATIVE, relative would be if "/" is missing, relative to the current node)
+ 
+ one step is established from:
+ 
+ axis:: nodetest[predicates]
+ 
+ axis are predefined keywords and (desemneaza) direction in which the (avansare) is made.
+ 
+ Parsing:
+ 
+ top to bottom
+ left to right
+ 
+ Document order PARSING (see image attached) --> (can also go in REVERSES document order): 
+ 
+			Root(1)
+			
+id="123"(3)   invoice(2)
+			
+		product(4)		product(9)
+		
+	code(5) price(7)	  code(10) price(12)
+	XYZ(6)  1.25(8)	      ABC(11)  2.21(13)
+	
+Numele ultimului ingredient din reteta a doua
+
+[2] = [position() = 2]

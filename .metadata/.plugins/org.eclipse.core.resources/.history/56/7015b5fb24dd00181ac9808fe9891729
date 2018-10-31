@@ -1,0 +1,65 @@
+package laborator5;
+
+import java.io.File;
+import java.util.List;
+
+import org.jdom2.Document;
+import org.jdom2.Element;
+import org.jdom2.Namespace;
+import org.jdom2.input.SAXBuilder;
+import org.jdom2.xpath.XPathExpression;
+import org.jdom2.xpath.XPathFactory;
+
+public class Main {
+
+	public static void main(String[] args) {
+		File myFile = new File("recipe.xml");
+		boolean ok = false;
+	try{
+		
+		SAXBuilder sb = new SAXBuilder();
+		Document doc = sb.build(myFile);
+		//System.out.println(doc.getRootElement().getValue());
+		
+		Element rssRoot = doc.getRootElement();
+	    Namespace defaultNS = rssRoot.getNamespace();
+	    List additionalNSs = rssRoot.getAdditionalNamespaces();
+	    
+	    if (ok) {
+	        if (additionalNSs==null) {
+	            ok = false;
+	        }
+	        else {
+	            ok = false;
+	            for (int i=0;!ok && i<additionalNSs.size();i++) {
+	                ok = getRSSNamespace().equals(additionalNSs.get(i));
+	            }
+	        }
+	    }
+	    
+		
+		XPathFactory xPathFactory = XPathFactory.instance();
+		
+		//String xPathExpression = "/Recipes/Recipe[2]/Ingredients/Ingredient[last()]/@name";
+		
+		String xPathExpression = "//*";
+		
+		XPathExpression expr = xPathFactory.compile(xPathExpression);
+		List<Object> evaluate = expr.evaluate(doc);
+	
+		for (Object object : evaluate) {
+			
+			Element elem = (Element) object;
+			//System.out.println(elem.getValue());
+			
+		}
+		
+		
+	}catch(Exception e)
+	{
+		System.out.println(e.toString());
+		
+	}
+	}
+
+}

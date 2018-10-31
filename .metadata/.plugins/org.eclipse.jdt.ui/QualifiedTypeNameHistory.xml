@@ -1,4 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
 <fullyQualifiedTypeName name="org.jdom2.input.sax.XMLReaders"/>
+<fullyQualifiedTypeName name="org.jaxen.expr.XPathFactory"/>
+<fullyQualifiedTypeName name="org.jdom2.xpath.XPathFactory"/>
+<fullyQualifiedTypeName name="org.jdom2.xpath.XPathExpression"/>
+<fullyQualifiedTypeName name="org.jdom2.Element"/>
+<fullyQualifiedTypeName name="org.jdom2.Attribute"/>
+<fullyQualifiedTypeName name="org.jdom2.Namespace"/>
 </qualifiedTypeNameHistroy>
