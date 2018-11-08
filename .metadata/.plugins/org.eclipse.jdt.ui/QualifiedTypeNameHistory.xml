@@ -7,4 +7,5 @@
 <fullyQualifiedTypeName name="org.jdom2.Element"/>
 <fullyQualifiedTypeName name="org.jdom2.Attribute"/>
 <fullyQualifiedTypeName name="org.jdom2.Namespace"/>
+<fullyQualifiedTypeName name="org.jdom2.output.Format"/>
 </qualifiedTypeNameHistroy>

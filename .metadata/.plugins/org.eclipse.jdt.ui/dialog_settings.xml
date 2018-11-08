@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
-	<item value="C:\Users\mpop9\Downloads\jdom-2.0.6\lib" key="org.eclipse.jdt.ui.lastextjar"/>
+	<item value="C:\Users\mpop9\Downloads\jdom-2.0.6" key="org.eclipse.jdt.ui.lastextjar"/>
 	<section name="org.eclipse.ltk.ui.refactoring.settings">
 	</section>
 	<section name="org.eclipse.jdt.internal.ui.packageview.PackageExplorerPart">

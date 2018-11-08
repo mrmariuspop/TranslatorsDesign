@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsl:stylesheet version="1.0"  xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+	<xsl:template match="/Recipes">
+		<!-- template number 1 -->
+		<html>
+		<head>
+		<title>blblabla</title>
+		</head>
+		</html>
+		<xsl:apply-templates/>
+	</xsl:template>
+	<xsl:template match="Recipes/Recipe">
+		<!-- template number 2 -->
+		<xsl:value-of select="Title"/>
+		<xsl:apply-templates select="Ingredients"/>
+		<xsl:apply-templates select="Preparation"/>
+		<xsl:value-of select="Comment"/>
+		<xsl:apply-templates select="Nutrients"/>
+	</xsl:template>
+	<xsl:template match="Ingredients">
+		<!-- template number 3 -->
+		<xsl:for-each select="Ingredient">
+		<xsl:value-of select="@name"/>
+		<xsl:value-of select="@qty"/>
+		<xsl:value-of select="@unit"/>
+	</xsl:for-each>
+	</xsl:template>
+	<xsl:template match="Preparation">
+		<!-- template number 4 -->
+		<xsl:for-each select="Step">
+		<xsl:value-of select="."/>
+		</xsl:for-each>
+	</xsl:template>
+	<xsl:template match="Nutrients">
+		<!-- template number 5 -->
+		<xsl:value-of select="@proteins"/>
+		<xsl:value-of select="@carbohid"/>
+		<xsl:value-of select="@fat"/>
+		<xsl:value-of select="@vitamins"/>
+		<xsl:value-of select="@calories"/>
+	</xsl:template>
+</xsl:stylesheet>

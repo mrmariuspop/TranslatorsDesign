@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Recipes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="recipe.xsd" >
+	<Description>Description about the book</Description>
+	<Recipe>
+		<Title>Pui cu orez</Title>
+		<Ingredients>
+			<Ingredient name="sofran" qty="21" unit="gram"></Ingredient>
+		</Ingredients>
+		<Preparation>
+			<Step>Pasul1</Step>
+		</Preparation>
+		<Comment>
+			Dear Mr.<name>John Smith</name>.
+			Your order <orderid>1032</orderid>
+			will be shipped on <shipdate>2001-07-13</shipdate>.
+		</Comment>
+		<Nutrients proteins="123" carbohid="21" fat="12" vitamins="213" calories="213"></Nutrients>
+	</Recipe>
+	<Recipe>
+		<Title>Friptura de vita</Title>
+		<Ingredients>
+			<Ingredient name="sofran" qty="21" unit="gram"></Ingredient>
+		</Ingredients>
+		<Preparation>
+			<Step>Pasi dupa pasi</Step>
+		</Preparation>
+		<Comment>
+			Dear Mr.<name>John Smith</name>.
+			Your order <orderid>1032</orderid>
+			will be shipped on <shipdate>2001-07-13</shipdate>.
+		</Comment>
+		<Nutrients proteins="123" carbohid="21" fat="12" vitamins="213" calories="213"></Nutrients>
+	</Recipe>
+	<Recipe>
+		<Title>Friptura de Ananas</Title>
+		<Ingredients>
+			<Ingredient name="sofran" qty="21" unit="gram"></Ingredient>
+		</Ingredients>
+		<Preparation>
+			<Step>Step by step</Step>
+		</Preparation>
+		<Comment>
+			Dear Mr.<name>John Smith</name>.
+			Your order <orderid>1032</orderid>
+			will be shipped on <shipdate>2001-07-13</shipdate>.
+		</Comment>
+		<Nutrients proteins="123" carbohid="21" fat="12" vitamins="213" calories="213"></Nutrients>
+	</Recipe>
+</Recipes>

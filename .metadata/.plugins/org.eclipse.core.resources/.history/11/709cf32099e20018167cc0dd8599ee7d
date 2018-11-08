@@ -1,0 +1,25 @@
+package laborator6;
+
+import java.io.File;
+
+import javax.xml.transform.Transformer;
+import javax.xml.transform.TransformerConfigurationException;
+import javax.xml.transform.TransformerFactory;
+import javax.xml.transform.stream.StreamSource;
+
+import org.jdom2.input.SAXBuilder;
+
+public class Main {
+
+	public static void main(String[] args) throws TransformerConfigurationException {
+
+		TransformerFactory tf = TransformerFactory.newInstance();
+		//we go for input 2  (the 2 steps refer to the preparation of the document)
+		StreamSource ss = new StreamSource(new File("example.xslt"));
+		Transformer tr = tf.newTransformer(ss);
+		//we go for input 1
+		SAXBuilder sb = new SAXBuilder();
+		sb.build("recipe.xml");
+	}
+
+}
