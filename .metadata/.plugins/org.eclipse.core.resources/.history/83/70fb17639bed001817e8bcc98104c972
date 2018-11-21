@@ -1,0 +1,22 @@
+package laborator8;
+
+import org.apache.poi.ss.usermodel.*;
+import org.apache.poi.xssf.usermodel.*;
+
+public class Main {
+
+	@SuppressWarnings({ "resource", "unused" })
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Workbook wb = new XSSFWorkbook();
+		CreationHelper ch = wb.getCreationHelper();
+		Sheet sh = wb.createSheet("MySheet");
+		CellStyle cs1 = wb.createCellStyle();
+		CellStyle cs2 = wb.createCellStyle();
+		DataFormat df = wb.createDataFormat();
+		
+		
+	}
+
+}

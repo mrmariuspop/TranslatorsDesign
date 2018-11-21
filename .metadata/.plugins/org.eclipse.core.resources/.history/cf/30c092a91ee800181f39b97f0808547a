@@ -1,0 +1,10 @@
+package laborator7;
+
+public class XMLtoXSLFO {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

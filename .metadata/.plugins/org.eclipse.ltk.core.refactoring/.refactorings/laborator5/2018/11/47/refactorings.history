@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move element &apos;ParseRecipe.java&apos; to &apos;laborator8/src/laborator8&apos;&#x0D;&#x0A;- Original project: &apos;laborator5&apos;&#x0D;&#x0A;- Destination element: &apos;laborator8/src/laborator8&apos;&#x0D;&#x0A;- Original element: &apos;laborator5.ParseRecipe.java&apos;&#x0D;&#x0A;- Update references to refactored element" description="Move compilation unit" destination="=laborator8/src&lt;laborator8" element1="/src&lt;laborator5{ParseRecipe.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.move" patterns="*" policy="org.eclipse.jdt.ui.moveResources" qualified="false" references="true" stamp="1542812864634" units="1" version="1.0"/>
+</session>

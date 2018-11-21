@@ -8,4 +8,13 @@
 <fullyQualifiedTypeName name="org.jdom2.Attribute"/>
 <fullyQualifiedTypeName name="org.jdom2.Namespace"/>
 <fullyQualifiedTypeName name="org.jdom2.output.Format"/>
+<fullyQualifiedTypeName name="javax.xml.transform.stream.StreamResult"/>
+<fullyQualifiedTypeName name="org.apache.fop.apps.FopFactory"/>
+<fullyQualifiedTypeName name="org.apache.fop.apps.FOUserAgent"/>
+<fullyQualifiedTypeName name="org.apache.fop.apps.MimeConstants"/>
+<fullyQualifiedTypeName name="org.apache.fop.apps.Fop"/>
+<fullyQualifiedTypeName name="javax.xml.transform.Source"/>
+<fullyQualifiedTypeName name="javax.xml.transform.sax.SAXResult"/>
+<fullyQualifiedTypeName name="javax.xml.transform.Result"/>
+<fullyQualifiedTypeName name="java.io.FileOutputStream"/>
 </qualifiedTypeNameHistroy>

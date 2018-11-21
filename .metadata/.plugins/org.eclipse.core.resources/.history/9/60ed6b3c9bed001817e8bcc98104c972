@@ -1,0 +1,16 @@
+package laborator8;
+
+import org.apache.poi.ss.usermodel.*;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Workbook wb = new XSSFWorkbook();
+		CreationHelper ch = wb.getCreationHelper();
+		Sheet sh = wb.createSheet("MySheet");
+	}
+
+}

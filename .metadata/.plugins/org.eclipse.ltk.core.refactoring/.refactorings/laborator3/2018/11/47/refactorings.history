@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Extract local variable &apos;children&apos; from expression &apos;doc.getRootElement().getChildren()&apos;&#x0D;&#x0A;- Original project: &apos;laborator3&apos;&#x0D;&#x0A;- Variable name: &apos;children&apos;&#x0D;&#x0A;- Destination method: &apos;laborator3.DTDParse.main()&apos;&#x0D;&#x0A;- Variable expression: &apos;doc.getRootElement().getChildren()&apos;&#x0D;&#x0A;- Replace occurrences of expression with variable" description="Extract local variable &apos;children&apos;" final="false" id="org.eclipse.jdt.ui.extract.temp" input="/src&lt;laborator3{DTDParse.java" name="children" replace="true" selection="569 34" stamp="1542813880529" version="1.0"/>
+</session>
