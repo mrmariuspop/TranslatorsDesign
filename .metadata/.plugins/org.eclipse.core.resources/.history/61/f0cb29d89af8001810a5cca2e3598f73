@@ -1,0 +1,35 @@
+package mypackage;
+
+import javax.xml.bind.JAXBContext;
+import javax.xml.bind.JAXBException;
+import javax.xml.bind.Marshaller;
+import mypackage.Recipes.Recipe;
+import mypackage.Recipes.Recipe.Ingredients.Ingredient;
+
+public class Main {
+
+	public static void main(String[] args) throws JAXBException {
+		JAXBContext jc = JAXBContext.newInstance("mypackage");
+		Marshaller msh = jc.createMarshaller();
+		ObjectFactory of = new ObjectFactory();
+		Recipes rec = of.createRecipes();
+		rec.setDescription("Carte de retete");
+		
+		Recipe recipe1 = new Recipe();
+		recipe1.setTitle("Pulpe de pui la cuptor");
+		Ingredient ing = new Ingredient();
+		ing.setName("sofran");
+		ing.setQty((BigInteger) 20);
+		ing.setUnit("grame");
+		ing.setValue("asdd");
+		recipe1.setIngredients(ing);
+		
+		Recipe recipe2 = new Recipe();
+		recipe2.setTitle("Friptura de porc");
+		
+		Recipe recipe3 = new Recipe();
+		recipe3.setTitle("Orez cu legume");
+
+	}
+
+}

@@ -1,0 +1,22 @@
+package mypackage;
+
+import javax.xml.bind.JAXBContext;
+import javax.xml.bind.JAXBException;
+import javax.xml.bind.Marshaller;
+import mypackage.Recipes.Recipe;
+
+public class Main {
+
+	public static void main(String[] args) throws JAXBException {
+		JAXBContext jc = JAXBContext.newInstance("mypackage");
+		Marshaller msh = jc.createMarshaller();
+		ObjectFactory of = new ObjectFactory();
+		Recipes rec = of.createRecipes();
+		rec.setDescription("Carte de retete");
+		
+		Recipe recipe1 = new Recipe();
+		recipe1.setTitle("Pulpe de pui la cuptor");
+		
+	}
+
+}

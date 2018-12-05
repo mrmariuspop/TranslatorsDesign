@@ -1,0 +1,89 @@
+package mypackage;
+
+import java.util.ArrayList;
+
+import javax.xml.bind.JAXBContext;
+import javax.xml.bind.JAXBException;
+import javax.xml.bind.Marshaller;
+
+import mypackage.Recipes.Recipe;
+import mypackage.Recipes.Recipe.Ingredients;
+import mypackage.Recipes.Recipe.Ingredients.Ingredient;
+import mypackage.Recipes.Recipe.Nutrients;
+import mypackage.Recipes.Recipe.Preparation;
+
+public class Main {
+
+	public static void main(String[] args) throws JAXBException {
+		JAXBContext jc = JAXBContext.newInstance("mypackage");
+		Marshaller msh = jc.createMarshaller();
+		ObjectFactory of = new ObjectFactory();
+		Recipes recs = of.createRecipes();
+		recs.setDescription("Carte de retete");
+		
+		Recipe recipe1 = new Recipe();
+		recipe1.setTitle("Pulpe de pui la cuptor");
+		Ingredients ings = new Ingredients();
+		Ingredient ing = new Ingredient();
+		ing.setName("sofran");
+		ing.setUnit("grame");
+		ing.setValue("asdd");
+		ings.setIngredient(ing);
+		recipe1.setIngredients(ings);
+		Nutrients nut1 = new Nutrients();
+		nut1.setCalories((short) 2);
+		nut1.setCarbohid((byte) 3);
+		nut1.setFat((byte) 5);
+		nut1.setVitamins((short) 6);
+		recipe1.setNutrients(nut1);
+		Preparation p1 = new Preparation();
+		p1.setStep("bland");
+		recipe1.setPreparation(p1);
+		
+		Recipe recipe2 = new Recipe();
+		recipe2.setTitle("Friptura de porc");
+		Ingredients ings2 = new Ingredients();
+		Ingredient ing2 = new Ingredient();
+		ing2.setName("parmezan");
+		ing2.setUnit("kilogranme");
+		ing2.setValue("ceva");
+		ings2.setIngredient(ing2);
+		recipe2.setIngredients(ings2);
+		Nutrients nut2 = new Nutrients();
+		nut2.setCalories((short) 2);
+		nut2.setCarbohid((byte) 3);
+		nut2.setFat((byte) 5);
+		nut2.setVitamins((short) 6);
+		recipe2.setNutrients(nut2);
+		Preparation p2 = new Preparation();
+		p2.setStep("dsa");
+		recipe2.setPreparation(p2);
+		
+		Recipe recipe3 = new Recipe();
+		recipe3.setTitle("Orez cu legume");
+		Ingredients ings3 = new Ingredients();
+		Ingredient ing3 = new Ingredient();
+		ing3.setName("naut");
+		ing3.setUnit("kilome");
+		ing3.setValue("ealtvea");
+		ings3.setIngredient(ing3);
+		recipe3.setIngredients(ings3);
+		Nutrients nut3 = new Nutrients();
+		nut3.setCalories((short) 2);
+		nut3.setCarbohid((byte) 3);
+		nut3.setFat((byte) 5);
+		nut3.setVitamins((short) 6);
+		recipe3.setNutrients(nut3);
+		
+		ArrayList<Recipe> reclist = new ArrayList<Recipe>();
+		reclist.add(recipe1);
+		reclist.add(recipe2);
+		reclist.add(recipe3);
+		
+		recs.recipe = reclist;
+		
+		msh.setProperty("jaxb.formatted.output", Boolean.TRUE);
+		msh.marshal(recs, System.out);
+	}
+
+}

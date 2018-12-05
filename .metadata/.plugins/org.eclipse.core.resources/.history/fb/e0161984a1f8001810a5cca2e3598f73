@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="Recipes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Description" type="xs:string"/>
+        <xs:element name="Recipe" minOccurs="0" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Ingredients">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="Ingredient">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:string">
+                            <xs:attribute name="name" type="xs:string" use="required"/>
+                            <xs:attribute name="qty" type="xs:positiveInteger" use="required"/>
+                            <xs:attribute name="unit" type="xs:string" use="required"/>
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Preparation">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="Step" type="xs:string"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Comment">
+                <xs:complexType mixed="true">
+                  <xs:sequence>
+                    <xs:choice minOccurs="0" maxOccurs="unbounded">
+                      <xs:element name="shipdate" type="xs:anySimpleType"/>
+                      <xs:element name="name" type="xs:string"/>
+                      <xs:element name="orderid" type="xs:integer"/>
+                    </xs:choice>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Nutrients">
+                <xs:complexType>
+                  <xs:simpleContent>
+                    <xs:extension base="xs:string">
+                      <xs:attribute name="proteins" type="xs:byte" use="required"/>
+                      <xs:attribute name="carbohid" type="xs:byte" use="required"/>
+                      <xs:attribute name="fat" type="xs:byte" use="required"/>
+                      <xs:attribute name="vitamins" type="xs:short" use="required"/>
+                      <xs:attribute name="calories" type="xs:short" use="required"/>
+                    </xs:extension>
+                  </xs:simpleContent>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute name="Title" type="xs:string" use="required"/>
+            <xs:attribute name="CreationDate" type="xs:date" use="required"/>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:complexType name="main">
+    <xs:sequence/>
+  </xs:complexType>
+</xs:schema>
+

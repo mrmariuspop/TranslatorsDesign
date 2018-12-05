@@ -1,0 +1,62 @@
+package mypackage;
+
+import java.util.ArrayList;
+
+import javax.xml.bind.JAXBContext;
+import javax.xml.bind.JAXBException;
+import javax.xml.bind.Marshaller;
+
+import mypackage.Recipes.Recipe;
+import mypackage.Recipes.Recipe.Ingredients;
+import mypackage.Recipes.Recipe.Ingredients.Ingredient;
+
+public class Main {
+
+	public static void main(String[] args) throws JAXBException {
+		JAXBContext jc = JAXBContext.newInstance("mypackage");
+		Marshaller msh = jc.createMarshaller();
+		ObjectFactory of = new ObjectFactory();
+		Recipes rec = of.createRecipes();
+		rec.setDescription("Carte de retete");
+		
+		Recipe recipe1 = new Recipe();
+		recipe1.setTitle("Pulpe de pui la cuptor");
+		Ingredients ings = new Ingredients();
+		Ingredient ing = new Ingredient();
+		ing.setName("sofran");
+		ing.setUnit("grame");
+		ing.setValue("asdd");
+		ings.setIngredient(ing);
+		recipe1.setIngredients(ings);
+		
+		Recipe recipe2 = new Recipe();
+		recipe2.setTitle("Friptura de porc");
+		Ingredients ings1 = new Ingredients();
+		Ingredient ing1 = new Ingredient();
+		ing.setName("parmezan");
+		ing.setUnit("kilogranme");
+		ing.setValue("ceva");
+		ings.setIngredient(ing1);
+		recipe1.setIngredients(ings1);
+		
+		Recipe recipe3 = new Recipe();
+		recipe3.setTitle("Orez cu legume");
+		Ingredients ings2 = new Ingredients();
+		Ingredient ing2 = new Ingredient();
+		ing.setName("naut");
+		ing.setUnit("kilome");
+		ing.setValue("ealtvea");
+		ings.setIngredient(ing2);
+		recipe1.setIngredients(ings2);
+		
+		ArrayList<Recipe> reclist = new ArrayList<Recipe>();
+		reclist.add(recipe1);
+		reclist.add(recipe2);
+		reclist.add(recipe3);
+		
+		msh.setProperty("jaxb.formatted.output", Boolean.TRUE);
+		msh.marshal(rec, System.out);
+
+	}
+
+}
